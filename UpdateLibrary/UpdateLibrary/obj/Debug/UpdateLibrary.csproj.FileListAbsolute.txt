@@ -1,0 +1,9 @@
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\bin\Debug\UpdateLibrary.dll
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\bin\Debug\UpdateLibrary.pdb
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\obj\Debug\UpdateLibrary.csprojAssemblyReference.cache
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\obj\Debug\UpdateLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\obj\Debug\UpdateLibrary.dll
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\obj\Debug\UpdateLibrary.pdb
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Manamana\source\repos\UpdateLibrary\UpdateLibrary\obj\Debug\UpdateLibrary.csproj.CopyComplete
