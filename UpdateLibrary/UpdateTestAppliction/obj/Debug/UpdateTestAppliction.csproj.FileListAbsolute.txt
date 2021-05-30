@@ -10,3 +10,15 @@ C:\Users\Manamana\source\repos\UpdateLibrary\UpdateTestAppliction\bin\Debug\Newt
 C:\Users\Manamana\source\repos\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.csproj.CopyComplete
 C:\Users\Manamana\source\repos\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateLibrary.dll
 C:\Users\Manamana\source\repos\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateLibrary.pdb
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateTestAppliction.exe.config
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateTestAppliction.exe
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateTestAppliction.pdb
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\Newtonsoft.Json.dll
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateLibrary.dll
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\UpdateLibrary.pdb
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\bin\Debug\Newtonsoft.Json.xml
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.csprojAssemblyReference.cache
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.csproj.CoreCompileInputs.cache
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.csproj.CopyComplete
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.exe
+E:\development\UpdateLibrary\UpdateLibrary\UpdateTestAppliction\obj\Debug\UpdateTestAppliction.pdb

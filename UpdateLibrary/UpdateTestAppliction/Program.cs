@@ -27,7 +27,7 @@ namespace UpdateTestAppliction
 
             string filepath = Directory.GetCurrentDirectory() + @"\" + response[0].assets[0].name;
 
-            updateController.DownloadFileAsync(response[0].assets[0], filepath,5);
+            updateController.DownloadFileAsync(response[0].assets[0], filepath);
 
             Console.ReadKey();
         }

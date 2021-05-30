@@ -16,7 +16,7 @@ namespace UpdateLibrary
         public delegate void OnDownloadProcessReportEventHandler(object sender, float percent);
 
         /// <summary>
-        /// event is raised when process is reported
+        /// event is raised when a file is downloaded
         /// </summary>
         public event OnDownloadProcessReportEventHandler OnDownloadReportProcess;
 
@@ -77,43 +77,22 @@ namespace UpdateLibrary
         /// <param name="asset">github asset</param>
         /// <param name="path">path of the downloaded file</param>
         /// <param name="ReportProcessIntervall">time between downloadstate check</param>
-        public void DownloadFileAsync(Models.AssetsModel asset, string path, int ReportProcessIntervall = 200) 
+        public void DownloadFileAsync(Models.AssetsModel asset, string path) 
         {
-            bool downloading = true;
-
             if (File.Exists(path))
                 File.Delete(path);
 
-            new Thread(() => 
-            {
-                while (downloading) 
-                {
-                    if(File.Exists(path))
-                    {
-                        try 
-                        {
-                            //File i = 
-                            //Console.WriteLine(Files);
-                            long size = new System.IO.FileInfo(path).Length;
-                            long assetSize = asset.size;
-                            float percentage = (size / assetSize) * 100;
-                            OnDownloadReportProcess?.Invoke(this, percentage);
-                        }
-                        catch (Exception ex) { Console.WriteLine(ex.Message); }
-                    }
-
-                    Thread.Sleep(ReportProcessIntervall);
-                }
-            }).Start();
 
             new Thread(() =>
             {
                 OnDownloadStarted?.Invoke(this, path, asset.browser_download_url, asset.size);
                 WebClient downloadClient = new WebClient();
+                downloadClient.DownloadProgressChanged += processChanged;
                 downloadClient.DownloadFile(asset.browser_download_url, path);
                 OnDownloadFinished?.Invoke(this, path, asset.browser_download_url);
-                downloading = false;
             }).Start();
         }
+
+        private void processChanged(object sender, DownloadProgressChangedEventArgs e) => OnDownloadReportProcess?.Invoke(this, e.ProgressPercentage);
     }
 }
