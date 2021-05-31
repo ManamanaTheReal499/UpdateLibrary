@@ -34,6 +34,13 @@ namespace UpdateLibrary
         /// </summary>
         public event OnDownloadStartedEventHandler OnDownloadStarted;
 
+        public delegate void OnDownloadCompletedEventHandler(object sender);
+
+        /// <summary>
+        /// event is raised when a download is done
+        /// </summary>
+        public event OnDownloadCompletedEventHandler OnDownloadCompleted;
+
         /// <summary>
         /// repository owner
         /// </summary>
@@ -72,24 +79,26 @@ namespace UpdateLibrary
         }
 
         /// <summary>
-        /// starts a asyncron download of a asset
+        /// starts a asyncron download of all assets in release
         /// </summary>
         /// <param name="asset">github asset</param>
-        /// <param name="path">path of the downloaded file</param>
+        /// <param name="path">path of the downloaded files "c:\users\desktop\folder"</param>
         /// <param name="ReportProcessIntervall">time between downloadstate check</param>
-        public void DownloadFileAsync(Models.AssetsModel asset, string path) 
+        public void DownloadFileAsync(Models.ResponseModel response, string path) 
         {
             if (File.Exists(path))
                 File.Delete(path);
 
-
             new Thread(() =>
             {
-                OnDownloadStarted?.Invoke(this, path, asset.browser_download_url, asset.size);
-                WebClient downloadClient = new WebClient();
-                downloadClient.DownloadProgressChanged += processChanged;
-                downloadClient.DownloadFile(asset.browser_download_url, path);
-                OnDownloadFinished?.Invoke(this, path, asset.browser_download_url);
+                foreach(var asset in response.assets) {
+                    OnDownloadStarted?.Invoke(this, path, asset.browser_download_url, asset.size);
+                    WebClient downloadClient = new WebClient();
+                    downloadClient.DownloadProgressChanged += processChanged;
+                    downloadClient.DownloadFile(asset.browser_download_url, $@"{path}\{asset.name}");
+                    OnDownloadFinished?.Invoke(this, path, asset.browser_download_url);
+                }
+                OnDownloadCompleted?.Invoke(this);
             }).Start();
         }
 

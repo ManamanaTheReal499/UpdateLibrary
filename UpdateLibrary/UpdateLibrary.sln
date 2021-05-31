@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateLibrary", "UpdateLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateTestAppliction", "UpdateTestAppliction\UpdateTestAppliction.csproj", "{93D67DF3-59E9-4066-AFCD-3CA252E3D929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUpdateTest", "WpfUpdateTest\WpfUpdateTest.csproj", "{5E19BB7E-1A32-415C-8BB9-E4512AF09B88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{93D67DF3-59E9-4066-AFCD-3CA252E3D929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D67DF3-59E9-4066-AFCD-3CA252E3D929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D67DF3-59E9-4066-AFCD-3CA252E3D929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E19BB7E-1A32-415C-8BB9-E4512AF09B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E19BB7E-1A32-415C-8BB9-E4512AF09B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E19BB7E-1A32-415C-8BB9-E4512AF09B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E19BB7E-1A32-415C-8BB9-E4512AF09B88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
