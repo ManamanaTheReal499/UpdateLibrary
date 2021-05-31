@@ -20,10 +20,14 @@ updateController.OnDownloadStarted += DownloadStarted;
 updateController.OnDownloadFinished += DownloadFinished;
 
 //path where the file is stored
-string filepath = Directory.GetCurrentDirectory() + @"\" + response[0].assets[0].name;
+string filepath = Directory.GetCurrentDirectory() + @"\folder";
 
-//downloading lastest release
-updateController.DownloadFileAsync(response[0].assets[0], filepath);
+//creating folder
+if (!Directory.Exists(filepath))
+  Directory.CreateDirectory(filepath);
+
+//downloading all assets from lastest release
+updateController.DownloadFileAsync(response[0], filepath);
 ```
 
 Update library c# .net 4.7
